@@ -1,0 +1,33 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "description": "Sean Mumford's Interactive Resume",
+  "repository": "https://github.com/thepsion5/interactive-resume",
+  "main": "src/public/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --recursive"
+  },
+  "author": "Sean Mumford",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "chai": "^3.5.0",
+    "immutable": "^3.8.1",
+    "mocha": "^3.2.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^1.14.0"
+  }
+}
