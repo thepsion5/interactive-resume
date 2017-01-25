@@ -5,7 +5,9 @@ export default class SkillsetList extends Component
 {
 
 	static propTypes = {
-
+		actions: PropTypes.object.isRequired,
+		skillsets: PropTypes.object.isRequired,
+		display: PropTypes.bool.isRequired
 	}
 
 	handleToggleSkillsets = () => {

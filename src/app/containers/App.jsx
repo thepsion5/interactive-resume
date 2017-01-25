@@ -6,6 +6,11 @@ import SkillsetList from '../components/SkillsetList.jsx';
 
 class App extends Component
 {
+	static propTypes = {
+		actions: PropTypes.object.isRequired,
+		skillsets: PropTypes.object.isRequired,
+		display_skillsets: PropTypes.bool.isRequired
+	}
 
 	render() {
 		return (
