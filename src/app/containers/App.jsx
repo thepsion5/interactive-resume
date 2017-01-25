@@ -2,10 +2,20 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as ResumeActions from '../actions.js';
+import SkillsetList from '../components/SkillsetList.jsx';
 
-class App extends Component{
+class App extends Component
+{
+
 	render() {
-		return (<p>This will eventually be interactive</p>);
+		return (
+			<div id="interactive-resume">
+				<SkillsetList
+					actions={ this.props.actions }
+					skillsets={ this.props.skillsets }
+					display={ this.props.display_skillsets } />
+			</div>
+		);
 	}
 };
 
@@ -15,7 +25,8 @@ class App extends Component{
 function mapStateToProps(state)
 {
 	return {
-		skillsets: state.skillsets
+		skillsets: state.skillsets,
+		display_skillsets: state.display_skillsets
 	};
 }
 

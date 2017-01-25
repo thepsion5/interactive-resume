@@ -1,7 +1,14 @@
 import { SHOW_SKILLSETS, HIDE_SKILLSETS } from '../actions.js';
 
 const initialState = {
-	skillsets: {},
+	skillsets: {
+		"Language" : {
+			"Javascript": {
+				"years" : 12,
+				"proficiency" : 0.7
+			}
+		}
+	},
 	display_skillsets: true
 };
 
