@@ -5,7 +5,8 @@
   "repository": "https://github.com/thepsion5/interactive-resume",
   "main": "src/public/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --recursive"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --recursive",
+    "build": "./node_modules/.bin/webpack -d"
   },
   "author": "Sean Mumford",
   "license": "ISC",
