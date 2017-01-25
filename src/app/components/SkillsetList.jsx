@@ -44,10 +44,10 @@ export default class SkillsetList extends Component
 			return null;
 		}
 
-		return (
-			<ul id="skillset-list">
-				<li>Skillset List Placeholder</li>
-			</ul>
-		);
+		return Object.keys(this.props.skillsets).map(function(skillsetName, index) {
+			return (
+				<Skillset skillset_name={skillsetName} skills={this.props.skillsets[skillsetName]} key={index} />
+			);
+		}, this);
 	}
 }
