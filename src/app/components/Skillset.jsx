@@ -20,7 +20,7 @@ export default class Skillset extends React.Component
 		return skillNames.map( function(skillName, index) {
 			return (
 				<li key={index}>
-					<strong>{ skillName }</strong>
+					<strong>{ skillName }</strong>&nbsp;
 					<small>{ this.props.skills[skillName].years } years</small>
 					{ this.renderProficiencyIndicator(this.props.skills[skillName]) }
 				</li>
@@ -32,7 +32,7 @@ export default class Skillset extends React.Component
 	{
 		let proficiency = parseInt(skill.proficiency*10);
 		return (
-			<span className="proficiency-container">
+			<span className="proficiency-container pull-right">
 				<span className="proficiency-filled">{String.fromCharCode(8226).repeat(proficiency)}</span>
 				<span className="proficiency-empty">{String.fromCharCode(8226).repeat(10-proficiency)}</span>
 			</span>

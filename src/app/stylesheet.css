@@ -6,15 +6,20 @@
 
 #skillset-list h3 {
 	border-bottom: 2px solid #DDD;
+	padding-bottom: 5px;
 }
 
 #skillset-list small {
 	font-style: italic;
 }
 
+#skillset-list li {
+	padding: 3px 0;
+}
+
 #skillset-list .proficiency-filled, #skillset-list .proficiency-empty {
     font-size: 48px;
-    line-height: 4px;
+    line-height: 24px;
     vertical-align: middle;
     width: 13em;
 }
