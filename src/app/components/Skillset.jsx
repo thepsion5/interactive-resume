@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 
-export default class Skillset extends React.Component
+export default class Skillset extends Component
 {
+	static propTypes = {
+		skills: PropTypes.object,
+		skillset_name: PropTypes.string
+	};
+
 	render()
 	{
 		return (
