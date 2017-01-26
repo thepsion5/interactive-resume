@@ -1,0 +1,28 @@
+#app h2, #app h3 {
+    color: #900;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+#skillset-list h3 {
+	border-bottom: 2px solid #DDD;
+}
+
+#skillset-list small {
+	font-style: italic;
+}
+
+#skillset-list .proficiency-filled, #skillset-list .proficiency-empty {
+    font-size: 48px;
+    line-height: 4px;
+    vertical-align: middle;
+    width: 13em;
+}
+
+#skillset-list .proficiency-filled {
+	color: #900;
+}
+
+#skillset-list .proficiency-empty {
+	color: #DDD;
+}

@@ -7,6 +7,8 @@ import reducer from './reducers';
 
 const store = createStore(reducer);
 
+require("./stylesheet.css");
+
 render(
 	<Provider store={store}>
 		<App />
