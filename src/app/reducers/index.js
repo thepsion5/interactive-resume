@@ -2,10 +2,28 @@ import { SHOW_SKILLSETS, HIDE_SKILLSETS } from '../actions.js';
 
 const initialState = {
 	skillsets: {
-		"Language" : {
+		"Languages" : {
 			"Javascript": {
 				"years" : 12,
 				"proficiency" : 0.7
+			},
+			"PHP": {
+				"years" : 12,
+				"proficiency" : 0.9
+			},
+			"SQL": {
+				"years" : 10,
+				"proficiency" : 0.5
+			}
+		},
+		"Frameworks" : {
+			"Laravel" : {
+				"years" : 5,
+				"proficiency" : 0.9
+			},
+			"jQuery" : {
+				"years" : 8,
+				"proficiency" : 0.8
 			}
 		}
 	},
