@@ -12,6 +12,11 @@ class App extends Component
 		display_skillsets: PropTypes.bool.isRequired
 	}
 
+	componentDidMount()
+	{
+		this.props.actions.loadResume();
+	}
+
 	render() {
 		return (
 			<div id="interactive-resume" className="row">
