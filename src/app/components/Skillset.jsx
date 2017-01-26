@@ -7,7 +7,7 @@ export default class Skillset extends React.Component
 		return (
 			<div>
 				<h3>{ this.props.skillset_name }</h3>
-				<ul className="skills">
+				<ul className="skills list-unstyled">
 					{ this.renderSkills() }
 				</ul>
 			</div>
@@ -21,7 +21,7 @@ export default class Skillset extends React.Component
 			return (
 				<li key={index}>
 					<strong>{ skillName }</strong>
-					<em>{ this.props.skills[skillName].years } years</em>
+					<small>{ this.props.skills[skillName].years } years</small>
 					{ this.renderProficiencyIndicator(this.props.skills[skillName]) }
 				</li>
 			);
@@ -32,10 +32,10 @@ export default class Skillset extends React.Component
 	{
 		let proficiency = parseInt(skill.proficiency*10);
 		return (
-			<span>
-				<span className="proficiency-filled">{String.fromCharCode(8226).repeat(skill.proficiency)}</span>
-            	<span className="proficiency-empty">{String.fromCharCode(8226).repeat(10-skill.proficiency)}</span>
-        	</span>
-        );
+			<span className="proficiency-container">
+				<span className="proficiency-filled">{String.fromCharCode(8226).repeat(proficiency)}</span>
+				<span className="proficiency-empty">{String.fromCharCode(8226).repeat(10-proficiency)}</span>
+			</span>
+		);
 	}
 }

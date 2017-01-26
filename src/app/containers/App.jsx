@@ -14,7 +14,7 @@ class App extends Component
 
 	render() {
 		return (
-			<div id="interactive-resume">
+			<div id="interactive-resume" className="row">
 				<SkillsetList
 					actions={ this.props.actions }
 					skillsets={ this.props.skillsets }

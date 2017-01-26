@@ -20,7 +20,8 @@ export default class SkillsetList extends Component
 
 	render() {
 		return (
-			<div id="skillsets">
+			<div id="skillset-list" className="col-sm-6">
+			<h2>Skills</h2>
 				{ this.renderControls() }
 				{ this.renderList() }
 			</div>
@@ -30,7 +31,7 @@ export default class SkillsetList extends Component
 	renderControls()
 	{
 		return (
-			<div className="skillset-controls">
+			<div id="skillset-controls">
 				<button className="btn btn-primary btn-xs" onClick={ this.handleToggleSkillsets }>
 					{ this.props.display ? 'Hide Skillsets' : 'Show Skillsets' }
 				</button>
