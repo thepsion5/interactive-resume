@@ -18,9 +18,10 @@ export default store => next => action => {
 	superAgent[method](path)
 		.end( (error, response) => {
 			if(error) {
+				let message = error.message ? error.message : 'Unable to complete API request';
 				dispatch({
 					type: failureType,
-					payload: error,
+					payload: {error, message},
 					error: true
 				});
 			} else {

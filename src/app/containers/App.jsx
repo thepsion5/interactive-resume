@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as ResumeActions from '../actions.js';
 import SkillsetList from '../components/SkillsetList.jsx';
+import NotificationBar from '../components/NotificationBar.jsx';
 
 class App extends Component
 {
@@ -20,6 +21,9 @@ class App extends Component
 	render() {
 		return (
 			<div id="interactive-resume" className="row">
+				<NotificationBar
+					type={ this.props.notification.type }
+					message={ this.props.notification.message } />
 				<SkillsetList
 					actions={ this.props.actions }
 					skillsets={ this.props.skillsets }
@@ -36,7 +40,11 @@ function mapStateToProps(state)
 {
 	return {
 		skillsets: state.skillsets,
-		display_skillsets: state.display_skillsets
+		display_skillsets: state.display_skillsets,
+		notification: {
+			type: state.notification.type,
+			message: state.notification.message
+		}
 	};
 }
 
