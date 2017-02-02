@@ -27,7 +27,7 @@ export default store => next => action => {
 			} else {
 				dispatch({
 					type: successType,
-					payload: response,
+					payload: response.body,
 				});
 			}
 		});

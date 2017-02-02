@@ -1,4 +1,4 @@
-import { SHOW_SKILLSETS, HIDE_SKILLSETS, LOAD_RESUME_FAILED } from '../actions.js';
+import { SHOW_SKILLSETS, HIDE_SKILLSETS, LOAD_RESUME_FAILED, LOAD_RESUME_SUCCESS } from '../actions.js';
 
 const initialState = {
 	skillsets: {},
@@ -32,6 +32,12 @@ export default function resume(state = initialState, action)
 					type: "error",
 					message: action.payload.message
 				}
+			}
+		case LOAD_RESUME_SUCCESS:
+			return {
+				skillsets: action.payload.skillsets,
+				display_skillsets: state.display_skillsets,
+				notification: state.notification
 			}
 		default:
 			return state;
