@@ -31,3 +31,7 @@
 #skillset-list .proficiency-empty {
 	color: #DDD;
 }
+
+#skillset-list .unknown-proficiency {
+    color: #900;
+}

@@ -38,8 +38,13 @@ export default class Skillset extends Component
 	renderProficiencyIndicator(skill)
 	{
 		let proficiency = parseInt(skill.proficiency*10);
+		if(Number.isNaN(proficiency)) {
+			return(
+				<span className="proficiency-container pull-right unknown-proficiency" title="Proficiency: UNKNOWN">??????????</span>
+			);
+		}
 		return (
-			<span className="proficiency-container pull-right">
+			<span className="proficiency-container pull-right" title={"Proficiency: " + proficiency + "/10"}>
 				<span className="proficiency-filled">{String.fromCharCode(8226).repeat(proficiency)}</span>
 				<span className="proficiency-empty">{String.fromCharCode(8226).repeat(10-proficiency)}</span>
 			</span>
