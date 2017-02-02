@@ -23,10 +23,12 @@ export default class Skillset extends Component
 	{
 		let skillNames = Object.keys(this.props.skills);
 		return skillNames.map( function(skillName, index) {
+
+			let yearsLabel = this.props.skills[skillName].years != 1 ? 'years' : 'year';
 			return (
 				<li key={index}>
 					<strong>{ skillName }</strong>&nbsp;
-					<small>{ this.props.skills[skillName].years } years</small>
+					<small>{ this.props.skills[skillName].years } { yearsLabel }</small>
 					{ this.renderProficiencyIndicator(this.props.skills[skillName]) }
 				</li>
 			);
