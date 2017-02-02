@@ -39,12 +39,9 @@ class App extends Component
 function mapStateToProps(state)
 {
 	return {
-		skillsets: state.skillsets,
-		display_skillsets: state.display_skillsets,
-		notification: {
-			type: state.notification.type,
-			message: state.notification.message
-		}
+		skillsets: state.get('skillsets'),
+		display_skillsets: state.get('display_skillsets'),
+		notification: state.get('notification')
 	};
 }
 

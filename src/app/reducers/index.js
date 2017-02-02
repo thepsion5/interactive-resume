@@ -1,44 +1,29 @@
 import { SHOW_SKILLSETS, HIDE_SKILLSETS, LOAD_RESUME_FAILED, LOAD_RESUME_SUCCESS } from '../actions.js';
+import { Map } from 'immutable';
 
-const initialState = {
+const initialState = Map({
 	skillsets: {},
 	display_skillsets: true,
 	notification: {
 		type: null,
 		message: null
 	}
-};
+});
 
 export default function resume(state = initialState, action)
 {
 	switch(action.type) {
 		case SHOW_SKILLSETS:
-			return {
-				skillsets: state.skillsets,
-				display_skillsets: true,
-				notification: state.notification
-			};
+			return state.set('display_skillsets', true);
 		case HIDE_SKILLSETS: 
-			return {
-				skillsets: state.skillsets,
-				display_skillsets: false,
-				notification: state.notification
-			};
+			return state.set('display_skillsets', false);
 		case LOAD_RESUME_FAILED:
-			return {
-				skillsets: state.skillsets,
-				display_skillsets: false,
-				notification: {
-					type: "error",
-					message: action.payload.message
-				}
-			}
+			return state.set('notification', {
+				type: "error",
+				message: action.payload.message
+			});
 		case LOAD_RESUME_SUCCESS:
-			return {
-				skillsets: action.payload.skillsets,
-				display_skillsets: state.display_skillsets,
-				notification: state.notification
-			}
+			return state.set('skillsets', action.payload.skillsets);
 		default:
 			return state;
 	}
